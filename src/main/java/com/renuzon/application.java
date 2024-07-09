@@ -1,13 +1,38 @@
-package com.renuzon.shopping;
+package com.renuzon;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
-@SpringBootApplication
-public class Application {
+/**
+ * Unit test for simple App.
+ */
+public class AppTest 
+    extends TestCase
+{
+    /**
+     * Create the test case
+     *
+     * @param testName name of the test case
+     */
+    public AppTest( String testName )
+    {
+        super( testName );
+    }
 
-    public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+    /**
+     * @return the suite of tests being tested
+     */
+    public static Test suite()
+    {
+        return new TestSuite( AppTest.class );
+    }
+
+    /**
+     * Rigourous Test :-)
+     */
+    public void testApp()
+    {
+        assertTrue( true );
     }
 }
-
