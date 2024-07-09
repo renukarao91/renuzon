@@ -1,39 +1,31 @@
 pipeline {
     agent any
 
+//	tools {
+//		jdk 'jdk8'
+//	}
+//	environment {
+//		M2_INSTALL = "/usr/bin/mvn"
+//	}
+
     stages {
         stage('Clone-Repo') {
 	    	steps {
 	        	checkout scm
 	    	}
         }
-	stage('Build') {
-		steps {
-			sh 'mvn install'
-		}
-	}	
- 
-	stage ('Compile'){
-	        steps {
-			sh 'mvn clean compile'
-                }
-	}
 
-	stage('Run Tests') {
-	    steps {
-	       sh 'mvn test'
-	    }
-	}
-
-        stage('Package as WAR') {
+        stage('Build') {
             steps {
-                sh 'mvn package'
+                sh 'mvn install -Dmaven.test.skip=true'
             }
         }
-	stage('Deployment') {
-	   steps {
-		sh 'sshpass -p root scp target/renuzon.war root@172.31.41.239:/root/tom/apache-tomcat-9.0.91/webapps'
-	}
+		
+        stage('Unit Tests') {
+            steps {
+                sh 'mvn compiler:testCompile'
+                sh 'mvn surefire:test'
+            }
+        }
     }
-}
 }
