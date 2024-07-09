@@ -1,11 +1,5 @@
 pipeline {
     agent any
-	tools{
-		jdk 'jdk11'
-	}
-	tools{
-		maven 'M3'
-	}
 
     stages {
         stage('Clone-Repo') {
