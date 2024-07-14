@@ -1,24 +1,50 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'Maven'
+    }
+
     stages {
-        stage('Clone-Repo') {
-	    	steps {
-	        	checkout scm
-	    	}
+        stage('Checkout') {
+            steps {
+                script {
+                    node {
+                        checkout([$class: 'GitSCM', branches: [[name: '*/main']], 
+                        userRemoteConfigs: [[url: 'https://github.com/renukarao91/renuzon.git']]])
+                    }
+                }
+            }
+        }
+
+        stage('Install Maven') {
+            steps {
+                sh 'mvn --version'
+            }
         }
 
         stage('Build') {
             steps {
-                sh 'mvn install -Dmaven.test.skip=true'
+                sh 'mvn clean install'
             }
         }
-		
-        stage('Unit Tests') {
+
+        stage('Deploy') {
             steps {
-                sh 'mvn compiler:testCompile'
-                sh 'mvn surefire:test'
+                sh 'mvn deploy'
             }
+        }
+    }
+
+    post {
+        always {
+            echo 'Pipeline finished.'
+        }
+        success {
+            echo 'Pipeline completed successfully.'
+        }
+        failure {
+            echo 'Pipeline failed.'
         }
     }
 }
