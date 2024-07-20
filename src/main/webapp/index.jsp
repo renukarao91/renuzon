@@ -16,6 +16,13 @@
             padding: 10px 0;
             text-align: center;
         }
+        .banner {
+            background-color: #1e90ff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 1.5em;
+        }
         nav {
             display: flex;
             justify-content: center;
@@ -73,6 +80,9 @@
     <header>
         <h1>Renuzon</h1>
     </header>
+    <div class="banner">
+        Welcome to Renuzon - Your Favorite Shopping Destination!
+    </div>
     <nav>
         <a href="#">Home</a>
         <a href="#">Products</a>
@@ -83,19 +93,19 @@
         <section class="products">
             <h2>Our Products</h2>
             <div class="product">
-                <img src="https://via.placeholder.com/300" alt="Product 1">
+                <img src="https://example.com/path-to-your-image1.jpg" alt="Product 1">
                 <h2>Product 1</h2>
                 <p>This is a great product.</p>
                 <div class="price">$19.99</div>
             </div>
             <div class="product">
-                <img src="https://via.placeholder.com/300" alt="Product 2">
+                <img src="https://example.com/path-to-your-image2.jpg" alt="Product 2">
                 <h2>Product 2</h2>
                 <p>This is another great product.</p>
                 <div class="price">$29.99</div>
             </div>
             <div class="product">
-                <img src="https://via.placeholder.com/300" alt="Product 3">
+                <img src="https://example.com/path-to-your-image3.jpg" alt="Product 3">
                 <h2>Product 3</h2>
                 <p>This product is the best.</p>
                 <div class="price">$39.99</div>
@@ -107,4 +117,3 @@
     </footer>
 </body>
 </html>
-
