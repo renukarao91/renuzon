@@ -1,43 +1,45 @@
 pipeline {
     agent any
-    
-    tools {
-        maven 'M3'
-    }
 
     stages {
-        stage('Clone-Repo') {
-	    	steps {
-	        	checkout scm
-	    	}
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/renukarao91/renuzon.git'
+            }
         }
-	stage('Build') {
-		steps {
-			sh 'mvn install'
-		}
-	}	
- 
-	stage ('Compile'){
-	        steps {
-			sh 'mvn clean compile'
-                }
-	}
 
-	stage('Run Tests') {
-	    steps {
-	       sh 'mvn test'
-	    }
-	}
+        stage('Build') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
 
-        stage('Package as WAR') {
+        stage('Test') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
+        stage('Package') {
             steps {
                 sh 'mvn package'
             }
         }
-	stage('Deployment') {
-	   steps {
-		sh 'sshpass -p root scp target/renuzon.war vpath@172.31.47.152:/root/renu/apache-tomcat-9.0.91/webapps'
-	}
+
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+                sh 'scp target/renuzon.war user@your-server:/path/to/deploy/'
+            }
+        }
     }
-}
+
+    post {
+        success {
+            echo 'Pipeline succeeded!'
+        }
+        failure {
+            echo 'Pipeline failed!'
+        }
+    }
 }
