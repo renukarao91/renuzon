@@ -27,39 +27,22 @@
             display: flex;
             justify-content: center;
             background-color: #444;
-            position: relative;
         }
-        nav a, .submenu a {
+        nav a {
             color: white;
             padding: 14px 20px;
             text-decoration: none;
             text-align: center;
-            display: block;
         }
-        nav a:hover, .submenu a:hover {
+        nav a:hover {
             background-color: #555;
-        }
-        .nav-item {
-            position: relative;
-        }
-        .submenu {
-            display: none;
-            position: absolute;
-            background-color: #555;
-            top: 100%;
-            left: 0;
-            width: 200px;
-            z-index: 1;
-        }
-        .nav-item:hover .submenu {
-            display: block;
         }
         .container {
             padding: 20px;
         }
         .products {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
         .product {
@@ -95,19 +78,6 @@
             width: 100%;
             bottom: 0;
         }
-        .cart {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 14px 20px;
-            color: white;
-            text-decoration: none;
-            background-color: #444;
-            border-left: 1px solid #555;
-        }
-        .cart:hover {
-            background-color: #555;
-        }
     </style>
 </head>
 <body>
@@ -119,13 +89,53 @@
     </div>
     <nav>
         <a href="#">Home</a>
-        <div class="nav-item">
-            <a href="#">Products</a>
-            <div class="submenu">
-                <a href="#">Category 1</a>
-                <a href="#">Category 2</a>
-                <a href="#">Category 3</a>
-            </div>
-        </div>
+        <a href="#">Products</a>
         <a href="#">About Us</a>
-        <a href="#">Contact
+        <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+        <section class="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Product 1">
+                <h2>Product 1</h2>
+                <p>This is a great product.</p>
+                <div class="price">$19.99</div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Product 2">
+                <h2>Product 2</h2>
+                <p>This is another great product.</p>
+                <div class="price">$29.99</div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Product 3">
+                <h2>Product 3</h2>
+                <p>This product is the best.</p>
+                <div class="price">$39.99</div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Product 4">
+                <h2>Product 4</h2>
+                <p>This is an excellent product.</p>
+                <div class="price">$24.99</div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Product 5">
+                <h2>Product 5</h2>
+                <p>This is a superb product.</p>
+                <div class="price">$34.99</div>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/300" alt="Product 6">
+                <h2>Product 6</h2>
+                <p>This is a top-notch product.</p>
+                <div class="price">$44.99</div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2024 Renuzon. All rights reserved.</p>
+    </footer>
+</body>
+</html>
