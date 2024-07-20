@@ -29,7 +29,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
-                sh 'scp target/renuzon.war user@your-server:/path/to/deploy/'
+                sh 'scp target/renuzon.war root@172.31.47.152:/root/renu/apache-tomcat-9.0.91/webapps'
             }
         }
     }
