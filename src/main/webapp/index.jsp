@@ -1,117 +1,126 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Renuzon - AWS DevOps</title>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<link href="css/sticky-footer-navbar.css" rel="stylesheet">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<script src="js/bootstrap.min.js"></script>
-
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        color: #333;
-        background-color: #f4f4f4;
-    }
-    header {
-        background-color: #0056b3; /* Dark Blue */
-        color: #fff;
-        padding: 20px;
-        text-align: center;
-    }
-    #tabs ul {
-        background-color: #0056b3; /* Dark Blue */
-        color: #fff;
-        padding: 0;
-    }
-    #tabs ul li {
-        display: inline;
-        margin-right: 10px;
-    }
-    #tabs ul li a {
-        color: #fff;
-        text-decoration: none;
-        padding: 10px;
-        display: inline-block;
-    }
-    #tabs ul li a:hover {
-        background-color: #004494; /* Slightly Darker Blue */
-    }
-    #tabs div {
-        padding: 20px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-top: none;
-    }
-    footer {
-        background-color: #333; /* Dark Grey */
-        color: #fff;
-        text-align: center;
-        padding: 10px;
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-    }
-</style>
-
-<script>
-    $(function() {
-        $("#tabs").tabs();
-    });
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renuzon - AWS, DevOps, Jenkins, Docker, Maven, K8s, Ansible</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        header p {
+            margin: 5px 0 0;
+            font-size: 1.2em;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #555;
+        }
+        nav a {
+            padding: 14px 20px;
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #777;
+        }
+        section {
+            padding: 20px;
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container">
+<header>
+    <h1>Renuzon</h1>
+    <p>Cloud and DevOps</p>
+</header>
 
-    <header>
-        <h1>Renuzon-AWS DevOps</h1> 
-        <h4>Contact: +91-9191919191 Email: info@renuzon.com</h4> 
-    </header>
+<nav>
+    <a href="#aws" onclick="showContent('aws')">AWS</a>
+    <a href="#devops" onclick="showContent('devops')">DevOps</a>
+    <a href="#jenkins" onclick="showContent('jenkins')">Jenkins</a>
+    <a href="#docker" onclick="showContent('docker')">Docker</a>
+    <a href="#maven" onclick="showContent('maven')">Maven</a>
+    <a href="#k8s" onclick="showContent('k8s')">Kubernetes</a>
+    <a href="#ansible" onclick="showContent('ansible')">Ansible</a>
+</nav>
 
-    <div id="tabs">
-        <ul>
-            <li><a href="#tabs-1">DevOps</a></li>
-            <li><a href="#tabs-2">AWS</a></li>
-            <li><a href="#tabs-3">Cloud Platform</a></li>
-            <li><a href="#tabs-4">Jenkins</a></li>
-        </ul>
-        <div id="tabs-1">
-            <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.</p>
-        </div>
-        <div id="tabs-2">
-            <p>AWS (Amazon Web Services) provides a comprehensive suite of cloud computing services that are highly relevant to DevOps practices. With its broad array of tools and services, AWS enables DevOps teams to automate and streamline their development and deployment processes.</p>
-            <p>Key AWS services used in DevOps include:</p>
-            <ul>
-                <li><strong>AWS CodePipeline</strong>: A continuous integration and continuous delivery (CI/CD) service that automates the build, test, and deploy phases of your release process.</li>
-                <li><strong>AWS CodeBuild</strong>: A fully managed build service that compiles source code, runs tests, and produces software packages ready for deployment.</li>
-                <li><strong>AWS CodeDeploy</strong>: A deployment service that automates the deployment of applications to various compute services, such as EC2, Lambda, and on-premises servers.</li>
-                <li><strong>AWS CloudFormation</strong>: A service that provides a common language for describing and provisioning all infrastructure resources in your cloud environment.</li>
-                <li><strong>AWS Elastic Beanstalk</strong>: An easy-to-use service for deploying and scaling web applications and services. It automatically handles the deployment, from capacity provisioning, load balancing, and auto-scaling to application health monitoring.</li>
-            </ul>
-            <p>By leveraging these AWS services, DevOps teams can achieve greater automation, consistency, and efficiency in their software delivery processes. AWS's robust and scalable infrastructure supports a wide range of DevOps practices, helping teams to focus on building and deploying high-quality software rapidly and reliably.</p>
-        </div>
-        <div id="tabs-3">
-            <p>Ansible is a configuration management tool, similar to Puppet and Chef. It's known for its simplicity and ease of use, making it accessible for beginners.</p>
-            <p>With Ansible, you can use simple YAML syntax to manage configurations. It's suitable for small-scale deployments but may require more advanced tools like Chef or Puppet for larger-scale systems.</p>
-        </div>
-        <div id="tabs-4">
-            <p>Jenkins is an open-source automation server that helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery (CI/CD)</p>
-            <p> It's highly extensible with a rich ecosystem of plugins and integrates well with various tools, platforms, and technologies.</p>
-        </div>
-    </div>
+<section id="aws" class="active">
+    <h2>AWS</h2>
+    <p>AWS (Amazon Web Services) is a comprehensive cloud computing platform provided by Amazon. It offers a wide range of services including computing power, storage, and databases, which are scalable and secure. AWS enables businesses to deploy applications and services quickly and efficiently, making it a popular choice for cloud-based solutions.</p>
+</section>
 
-</div>
+<section id="devops">
+    <h2>DevOps</h2>
+    <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality. DevOps integrates automation and monitoring at all stages, from coding and deployment to infrastructure management.</p>
+</section>
 
-<div class="container">
-    <footer>@ 2024 Renuzon. All rights reserved.</footer>
-</div>
+<section id="jenkins">
+    <h2>Jenkins</h2>
+    <p>Jenkins is an open-source automation server that helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery (CI/CD). Jenkins supports various plugins to extend its capabilities and integrate with other tools.</p>
+</section>
+
+<section id="docker">
+    <h2>Docker</h2>
+    <p>Docker is a platform that enables developers to automate the deployment of applications inside lightweight, portable containers. Containers include the application and its dependencies, ensuring consistency across different development and production environments. Docker simplifies application deployment, scaling, and management.</p>
+</section>
+
+<section id="maven">
+    <h2>Maven</h2>
+    <p>Apache Maven is a build automation tool primarily used for Java projects. Maven simplifies the build process, dependencies management, and project management. It uses a Project Object Model (POM) file to define project structure and dependencies, enabling developers to build projects, generate documentation, and manage releases efficiently.</p>
+</section>
+
+<section id="k8s">
+    <h2>Kubernetes</h2>
+    <p>Kubernetes, often abbreviated as K8s, is an open-source container orchestration platform. It automates the deployment, scaling, and management of containerized applications. Kubernetes provides a robust framework for running distributed systems, with features like service discovery, load balancing, and self-healing.</p>
+</section>
+
+<section id="ansible">
+    <h2>Ansible</h2>
+    <p>Ansible is an open-source automation tool that simplifies the management of systems and applications. It uses a simple, human-readable language (YAML) to describe automation tasks, making it easy to learn and use. Ansible is agentless, meaning it doesn't require special software to be installed on the managed nodes, and it supports a wide range of automation tasks, from configuration management to application deployment.</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 Renuzon. All rights reserved.</p>
+</footer>
+
+<script>
+    function showContent(id) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => section.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+    }
+</script>
 
 </body>
 </html>
