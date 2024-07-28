@@ -2,7 +2,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Renuzon - DevOps & Cloud Hub</title>
+<title>Renuzon - AWS DevOps</title>
 <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -71,7 +71,7 @@
 <div class="container">
 
     <header>
-        <h1>Renuzon DevOps & Cloud Hub</h1> 
+        <h1>Renuzon-AWS DevOps</h1> 
         <h4>Contact: +91-9191919191 Email: info@renuzon.com</h4> 
     </header>
 
@@ -80,11 +80,10 @@
             <li><a href="#tabs-1">DevOps</a></li>
             <li><a href="#tabs-2">AWS</a></li>
             <li><a href="#tabs-3">Cloud Platform</a></li>
-            <li><a href="#tabs-4">Azure Cloud</a></li>
+            <li><a href="#tabs-4">Jenkins</a></li>
         </ul>
         <div id="tabs-1">
             <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality.</p>
-            <p>Len Bass, Ingo Weber, and Liming Zhu, researchers from the CSIRO and the Software Engineering Institute, define DevOps as "a set of practices intended to reduce the time between committing a change to a system and the change being placed into normal production, while ensuring high quality".</p>
         </div>
         <div id="tabs-2">
             <p>AWS (Amazon Web Services) provides a comprehensive suite of cloud computing services that are highly relevant to DevOps practices. With its broad array of tools and services, AWS enables DevOps teams to automate and streamline their development and deployment processes.</p>
@@ -103,8 +102,8 @@
             <p>With Ansible, you can use simple YAML syntax to manage configurations. It's suitable for small-scale deployments but may require more advanced tools like Chef or Puppet for larger-scale systems.</p>
         </div>
         <div id="tabs-4">
-            <p>Azure Cloud offers a comprehensive suite of cloud services, including computing, analytics, storage, and networking. It's designed to support a wide range of applications and services.</p>
-            <p>With AWS, you can build, manage, and deploy applications on a global network using your preferred tools and frameworks.</p>
+            <p>Jenkins is an open-source automation server that helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery (CI/CD)</p>
+            <p> It's highly extensible with a rich ecosystem of plugins and integrates well with various tools, platforms, and technologies.</p>
         </div>
     </div>
 
