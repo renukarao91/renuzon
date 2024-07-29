@@ -13,7 +13,7 @@
             color: #333;
         }
         header {
-            background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background */
+            background-color: #006769; /* Semi-transparent background */
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -29,7 +29,7 @@
         nav {
             display: flex;
             justify-content: center;
-            background-color: #555;
+            background-color: #40a578;
         }
         nav a {
             padding: 14px 20px;
@@ -38,7 +38,7 @@
             text-decoration: none;
         }
         nav a:hover {
-            background-color: #777;
+            background-color: #b0ebb4;
         }
         section {
             padding: 20px;
@@ -48,7 +48,7 @@
             display: block;
         }
         footer {
-            background-color: #333;
+            background-color: #73bba3;
             color: white;
             text-align: center;
             padding: 10px 0;
