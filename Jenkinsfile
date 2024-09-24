@@ -5,15 +5,10 @@ pipeline {
         maven 'maven'
     }
     
-    stages {
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/renukarao91/renuzon.git'
-            }
-        }
-
-        stage('Build') {
-            steps {
+    stages{
+        stage('Build Maven'){
+            steps{
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/renukarao91/renuzon.git']])
                 sh 'mvn clean install'
             }
         }
