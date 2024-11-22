@@ -71,6 +71,7 @@
     <a href="#rds" onclick="showContent('rds')">RDS</a>
     <a href="#ebs" onclick="showContent('ebs')">EBS</a>
     <a href="#iam" onclick="showContent('iam')">IAM</a>
+    <a href="#elastic-beanstalk" onclick="showContent('elastic-beanstalk')">ElasticBeanStalk</a>
 </nav>
 
 <section id="ec2" class="active">
@@ -101,6 +102,11 @@
 <section id="iam">
     <h2>IAM (Identity and Access Management)</h2>
     <p>Amazon IAM allows you to securely control access to AWS resources. It lets you create and manage AWS users, groups, and roles with fine-grained permissions. IAM ensures that only authorized users and applications can access resources.</p>
+</section>
+
+<section id="elastic-beanstalk">
+    <h2>Elastic Bean Stalk</h2>
+    <p>Amazon Elastic Bean Stalk is a platform-as-a-service (PaaS) solution that simplifies the deployment and management of web applications and services. It automatically handles the provisioning of resources like EC2, S3, and load balancers. Elastic Beanstalk supports multiple programming languages and application frameworks, providing a quick and efficient way to deploy applications with minimal configuration.</p>
 </section>
 
 <footer>
