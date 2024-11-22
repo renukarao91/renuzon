@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Renuzon - AWS, DevOps, Jenkins, Docker, Maven, K8s, Ansible</title>
+    <title>Renuzon - AWS Services</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,7 +12,7 @@
             color: #333;
         }
         header {
-            background-color: #006769; /* Semi-transparent background */
+            background-color: #006769;
             color: white;
             padding: 20px 0;
             text-align: center;
@@ -62,52 +61,46 @@
 
 <header>
     <h1>Renuzon</h1>
-    <p>Cloud and DevOps</p>
+    <p>Comprehensive AWS Services</p>
 </header>
 
 <nav>
-    <a href="#aws" onclick="showContent('aws')">AWS</a>
-    <a href="#devops" onclick="showContent('devops')">DevOps</a>
-    <a href="#jenkins" onclick="showContent('jenkins')">Jenkins</a>
-    <a href="#docker" onclick="showContent('docker')">Docker</a>
-    <a href="#maven" onclick="showContent('maven')">Maven</a>
-    <a href="#k8s" onclick="showContent('k8s')">Kubernetes</a>
-    <a href="#ansible" onclick="showContent('ansible')">Ansible</a>
+    <a href="#ec2" onclick="showContent('ec2')">EC2</a>
+    <a href="#vpc" onclick="showContent('vpc')">VPC</a>
+    <a href="#s3" onclick="showContent('s3')">S3</a>
+    <a href="#rds" onclick="showContent('rds')">RDS</a>
+    <a href="#ebs" onclick="showContent('ebs')">EBS</a>
+    <a href="#iam" onclick="showContent('iam')">IAM</a>
 </nav>
 
-<section id="aws" class="active">
-    <h2>AWS</h2>
-    <p>AWS (Amazon Web Services) is a comprehensive cloud computing platform provided by Amazon. It offers a wide range of services including computing power, storage, and databases, which are scalable and secure. AWS enables businesses to deploy applications and services quickly and efficiently, making it a popular choice for cloud-based solutions.</p>
+<section id="ec2" class="active">
+    <h2>EC2 (Elastic Compute Cloud)</h2>
+    <p>Amazon EC2 provides scalable compute capacity in the cloud. It allows you to launch virtual servers, known as instances, to run applications and services. EC2 is highly customizable, offering a range of instance types, operating systems, and configurations to suit different workloads.</p>
 </section>
 
-<section id="devops">
-    <h2>DevOps</h2>
-    <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). It aims to shorten the systems development life cycle and provide continuous delivery with high software quality. DevOps integrates automation and monitoring at all stages, from coding and deployment to infrastructure management.</p>
+<section id="vpc">
+    <h2>VPC (Virtual Private Cloud)</h2>
+    <p>Amazon VPC enables you to create a secure and isolated network environment within the AWS cloud. It lets you define IP address ranges, subnets, route tables, and gateways for your virtual network infrastructure.</p>
 </section>
 
-<section id="jenkins">
-    <h2>Jenkins</h2>
-    <p>Jenkins is an open-source automation server that helps automate the parts of software development related to building, testing, and deploying, facilitating continuous integration and continuous delivery (CI/CD). Jenkins supports various plugins to extend its capabilities and integrate with other tools.</p>
+<section id="s3">
+    <h2>S3 (Simple Storage Service)</h2>
+    <p>Amazon S3 is an object storage service designed to store and retrieve any amount of data from anywhere. It supports features like versioning, encryption, and lifecycle management, ensuring data reliability and security.</p>
 </section>
 
-<section id="docker">
-    <h2>Docker</h2>
-    <p>Docker is a platform that enables developers to automate the deployment of applications inside lightweight, portable containers. Containers include the application and its dependencies, ensuring consistency across different development and production environments. Docker simplifies application deployment, scaling, and management.</p>
+<section id="rds">
+    <h2>RDS (Relational Database Service)</h2>
+    <p>Amazon RDS is a managed database service that supports popular database engines. It automates administrative tasks such as backups, updates, and scaling, enabling developers to focus on applications.</p>
 </section>
 
-<section id="maven">
-    <h2>Maven</h2>
-    <p>Apache Maven is a build automation tool primarily used for Java projects. Maven simplifies the build process, dependencies management, and project management. It uses a Project Object Model (POM) file to define project structure and dependencies, enabling developers to build projects, generate documentation, and manage releases efficiently.</p>
+<section id="ebs">
+    <h2>EBS (Elastic Block Store)</h2>
+    <p>Amazon EBS provides durable, high-performance block storage for EC2 instances. It is ideal for workloads requiring frequent data access, such as databases, analytics, and applications.</p>
 </section>
 
-<section id="k8s">
-    <h2>Kubernetes</h2>
-    <p>Kubernetes, often abbreviated as K8s, is an open-source container orchestration platform. It automates the deployment, scaling, and management of containerized applications. Kubernetes provides a robust framework for running distributed systems, with features like service discovery, load balancing, and self-healing.</p>
-</section>
-
-<section id="ansible">
-    <h2>Ansible</h2>
-    <p>Ansible is an open-source automation tool that simplifies the management of systems and applications. It uses a simple, human-readable language (YAML) to describe automation tasks, making it easy to learn and use. Ansible is agentless, meaning it doesn't require special software to be installed on the managed nodes, and it supports a wide range of automation tasks, from configuration management to application deployment.</p>
+<section id="iam">
+    <h2>IAM (Identity and Access Management)</h2>
+    <p>Amazon IAM allows you to securely control access to AWS resources. It lets you create and manage AWS users, groups, and roles with fine-grained permissions. IAM ensures that only authorized users and applications can access resources.</p>
 </section>
 
 <footer>
